@@ -1,9 +1,14 @@
-output "instance_id" {
-  description = "ID of the EC2 instance"
-  value       = aws_instance.app_server.id
+output "bucket_domain_name" {
+  value       = aws_s3_bucket.b.bucket_domain_name
+  description = "FQDN of bucket"
 }
 
-output "instance_public_ip" {
-  description = "Public IP address of the EC2 instance"
-  value       = aws_instance.app_server.public_ip
+output "bucket_id" {
+  value       = aws_s3_bucket.b.id
+  description = "Bucket Name (aka ID)"
+}
+
+output "bucket_region" {
+  value       = aws_s3_bucket.b.region
+  description = "Bucket region"
 }
